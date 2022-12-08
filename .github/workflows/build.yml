@@ -22,7 +22,7 @@ jobs:
     - name: Install
       run: yarn install --frozen-lockfile
     - name: Build
-      run: yarn build
+      run: yarn build --publish never
     - name: Build artifact
       uses: actions/upload-artifact@v2
       with:
