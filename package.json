@@ -1,18 +1,27 @@
 {
   "name": "game-overlay",
   "version": "1.0.0",
-  "description": "",
+  "description": "Configurable overlay window",
   "main": "src/main.js",
   "scripts": {
     "run": "electron src/main.js",
     "build": "electron-builder build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "build": {
+    "win": {
+      "icon": "icon.png"
+    },
+    "linux": {
+      "icon": "icon.png",
+      "category": "Utility"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hans00/game-overlay.git"
   },
-  "author": "",
+  "author": "Hans <admin@itsrv.tw>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hans00/game-overlay/issues"
