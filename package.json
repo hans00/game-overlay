@@ -10,11 +10,13 @@
   },
   "build": {
     "win": {
-      "icon": "icon.png"
+      "icon": "icon.png",
+      "target": "nsis"
     },
     "linux": {
       "icon": "icon.png",
-      "category": "Utility"
+      "category": "Utility",
+      "target": "AppImage"
     }
   },
   "repository": {
