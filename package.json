@@ -1,0 +1,28 @@
+{
+  "name": "game-overlay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "run": "electron src/main.js",
+    "build": "electron-builder build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hans00/game-overlay.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hans00/game-overlay/issues"
+  },
+  "homepage": "https://github.com/hans00/game-overlay#readme",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "electron-overlay-window": "^3.1.0"
+  }
+}
