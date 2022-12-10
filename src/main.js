@@ -2,18 +2,22 @@ const { app, BrowserWindow, globalShortcut, shell } = require('electron')
 const { OverlayController, OVERLAY_WINDOW_OPTS } = require('electron-overlay-window')
 const fs = require('fs')
 const path = require('path')
+const merge = require('merge-deep')
 
 app.disableHardwareAcceleration()
 
 let window
 
-const restartKey = 'CmdOrCtrl + Shift + X'
+const exitKey = 'CmdOrCtrl + Shift + X'
+const restartKey = 'CmdOrCtrl + Shift + R'
 const toggleMouseKey = 'CmdOrCtrl + Shift + M'
 const toggleShowKey = 'CmdOrCtrl + Shift + H'
 const showConfigKey = 'CmdOrCtrl + Shift + C'
 
 const defaultConfig = {
   window: {
+    x: 0,
+    y: 0,
     width: 800,
     height: 600,
     url: 'https://github.com/hans00/game-overlay/blob/main/README.md',
