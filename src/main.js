@@ -34,11 +34,13 @@ if (!fs.existsSync(configFile)) {
 }
 
 const {
-  exit: exitKey,
-  restart: restartKey,
-  mouse: toggleMouseKey,
-  hide: toggleShowKey,
-  config: showConfigKey,
+  keymap: {
+    exit: exitKey,
+    restart: restartKey,
+    mouse: toggleMouseKey,
+    hide: toggleShowKey,
+    config: showConfigKey,
+  },
 } = config
 
 const isOverlay = !!config.hookWindowTitle
