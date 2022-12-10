@@ -53,7 +53,7 @@ function createWindow () {
 
   window.loadURL(config.window.url)
 
-  if (isOverlay) {
+  if (process.env.NODE_ENV === 'development') {
     // NOTE: if you close Dev Tools overlay window will lose transparency
     window.webContents.openDevTools({ mode: 'detach', activate: false })
   }
@@ -71,8 +71,13 @@ function createWindow () {
 function makeInteractive () {
   let isInteractable = false
 
+  function exitApp () {
+    app.exit()
+  }
+
   function restartApp () {
-    app.restart()
+    app.relaunch()
+    app.exit()
   }
 
   function toggleOverlayState () {
@@ -88,6 +93,8 @@ function makeInteractive () {
   window.on('blur', () => {
     isInteractable = false
   })
+
+  globalShortcut.register(exitKey, exitApp)
 
   globalShortcut.register(restartKey, restartApp)
 
