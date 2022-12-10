@@ -1,6 +1,6 @@
 const { ipcRenderer, contextBridge } = require('electron')
 
-ipcRenderer.on('visibility-change', (e, state) => {
+ipcRenderer.on('visibility-change', () => {
   if (document.body.style.display) {
     document.body.style.display = null
   } else {

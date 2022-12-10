@@ -30,7 +30,7 @@ if (!fs.existsSync(configFile)) {
 } else {
   try {
     config = merge(config, JSON.parse(fs.readFileSync(configFile)))
-  } catch {}
+  } catch {} // eslint-disable-line no-empty
 }
 
 const {
