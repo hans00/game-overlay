@@ -51,8 +51,10 @@ function createWindow () {
 
   window.loadURL(config.window.url)
 
-  // NOTE: if you close Dev Tools overlay window will lose transparency
-  window.webContents.openDevTools({ mode: 'detach', activate: false })
+  if (isOverlay) {
+    // NOTE: if you close Dev Tools overlay window will lose transparency
+    window.webContents.openDevTools({ mode: 'detach', activate: false })
+  }
 
   makeInteractive()
 
