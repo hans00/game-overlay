@@ -15,11 +15,7 @@ const toggleShowKey = 'CmdOrCtrl + Shift + H'
 const showConfigKey = 'CmdOrCtrl + Shift + C'
 
 const defaultConfig = {
-  window: {
-    width: 800,
-    height: 600,
-    url: 'https://github.com/hans00/game-overlay/blob/main/README.md',
-  },
+  url: 'https://github.com/hans00/game-overlay/blob/main/README.md',
   hookWindowTitle: '',
 }
 
@@ -40,8 +36,8 @@ const isOverlay = !!config.hookWindowTitle
 
 function createWindow () {
   const windowOpts = {
-    width: config.window.width,
-    height: config.window.height,
+    width: 800,
+    height: 600,
     webPreferences: {
       preload: require.resolve('./preload'),
     },

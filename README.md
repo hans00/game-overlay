@@ -16,11 +16,7 @@ A configurable overlay window.
 
 ```json
 {
-  "window": {
-    "width": 800, // Overlay window width
-    "height": 600, // Overlay window height
-    "url": "Overlay window content",
-  },
+  "url": "Overlay window content URL",
   "hookWindowTitle": "Window title to overlay"
 }
 ```
