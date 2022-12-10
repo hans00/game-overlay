@@ -16,8 +16,6 @@ const showConfigKey = 'CmdOrCtrl + Shift + C'
 
 const defaultConfig = {
   window: {
-    x: 0,
-    y: 0,
     width: 800,
     height: 600,
     url: 'https://github.com/hans00/game-overlay/blob/main/README.md',
@@ -34,7 +32,7 @@ if (!fs.existsSync(configFile)) {
   fs.writeFileSync(configFile, JSON.stringify(defaultConfig, null, 4))
 } else {
   try {
-    config = JSON.parse(fs.readFileSync(configFile))
+    config = merge(config, JSON.parse(fs.readFileSync(configFile)))
   } catch {}
 }
 
