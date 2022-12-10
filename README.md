@@ -17,6 +17,13 @@ A configurable overlay window.
 ```json
 {
   "url": "Overlay window content URL",
-  "hookWindowTitle": "Window title to overlay"
+  "hookWindowTitle": "Window title to overlay",
+  "keymap": {
+    "restart": "CmdOrCtrl + Shift + R",
+    "exit": "CmdOrCtrl + Shift + X",
+    "hide": "CmdOrCtrl + Shift + H",
+    "mouse": "CmdOrCtrl + Shift + M",
+    "config": "CmdOrCtrl + Shift + C",
+  }
 }
 ```

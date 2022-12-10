@@ -8,15 +8,16 @@ app.disableHardwareAcceleration()
 
 let window
 
-const exitKey = 'CmdOrCtrl + Shift + X'
-const restartKey = 'CmdOrCtrl + Shift + R'
-const toggleMouseKey = 'CmdOrCtrl + Shift + M'
-const toggleShowKey = 'CmdOrCtrl + Shift + H'
-const showConfigKey = 'CmdOrCtrl + Shift + C'
-
 const defaultConfig = {
   url: 'https://github.com/hans00/game-overlay/blob/main/README.md',
   hookWindowTitle: '',
+  keymap: {
+    exit: 'CmdOrCtrl + Shift + X',
+    restart: 'CmdOrCtrl + Shift + R',
+    mouse: 'CmdOrCtrl + Shift + M',
+    hide: 'CmdOrCtrl + Shift + H',
+    config: 'CmdOrCtrl + Shift + C',
+  }
 }
 
 const configFile = path.join(app.getPath('userData'), 'config.json')
@@ -31,6 +32,14 @@ if (!fs.existsSync(configFile)) {
     config = merge(config, JSON.parse(fs.readFileSync(configFile)))
   } catch {}
 }
+
+const {
+  exit: exitKey,
+  restart: restartKey,
+  mouse: toggleMouseKey,
+  hide: toggleShowKey,
+  config: showConfigKey,
+} = config
 
 const isOverlay = !!config.hookWindowTitle
 
@@ -94,12 +103,13 @@ function makeInteractive () {
 
   globalShortcut.register(restartKey, restartApp)
 
-  if (isOverlay)
+  if (isOverlay) {
     globalShortcut.register(toggleMouseKey, toggleOverlayState)
 
-  globalShortcut.register(toggleShowKey, () => {
-    window.webContents.send('visibility-change', false)
-  })
+    globalShortcut.register(toggleShowKey, () => {
+      window.webContents.send('visibility-change', false)
+    })
+  }
 
   globalShortcut.register(showConfigKey, () => {
     shell.showItemInFolder(configFile)
