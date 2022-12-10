@@ -2,6 +2,8 @@
 
 A configurable overlay window.
 
+[![build](https://github.com/hans00/game-overlay/actions/workflows/build.yml/badge.svg)](https://github.com/hans00/game-overlay/actions/workflows/build.yml)
+
 ---
 
 ## Keymap
