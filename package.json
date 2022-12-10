@@ -4,7 +4,7 @@
   "description": "Configurable overlay window",
   "main": "src/main.js",
   "scripts": {
-    "run": "electron src/main.js",
+    "start": "electron .",
     "build": "electron-builder build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -21,12 +21,12 @@ const defaultConfig = {
   hookWindowTitle: '',
 }
 
-const configFile = path.join(app.getPath('appData'), 'config.json')
+const configFile = path.join(app.getPath('userData'), 'config.json')
 
 let config = defaultConfig
 
 if (!fs.existsSync(configFile)) {
-  fs.mkdirSync(app.getPath('appData'), { recursive: true })
+  fs.mkdirSync(app.getPath('userData'), { recursive: true })
   fs.writeFileSync(configFile, JSON.stringify(defaultConfig, null, 4))
 } else {
   try {
