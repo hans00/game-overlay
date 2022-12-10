@@ -58,7 +58,7 @@ function createWindow () {
     isOverlay ? { ...windowOpts, ...OVERLAY_WINDOW_OPTS } : windowOpts
   )
 
-  window.loadURL(config.window.url)
+  window.loadURL(config.url)
 
   if (process.env.NODE_ENV === 'development') {
     // NOTE: if you close Dev Tools overlay window will lose transparency
