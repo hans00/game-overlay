@@ -16,7 +16,7 @@ const defaultConfig = {
   window: {
     width: 800,
     height: 600,
-    url: 'https://example.com',
+    url: 'https://github.com/hans00/game-overlay/blob/main/README.md',
   },
   hookWindowTitle: '',
 }
