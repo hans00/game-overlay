@@ -35,7 +35,7 @@
     "eslint": "^8.29.0"
   },
   "dependencies": {
-    "electron-overlay-window": "^3.1.0",
+    "electron-overlay-window": "^3.2.0",
     "merge-deep": "^3.0.3"
   }
 }
