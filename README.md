@@ -10,7 +10,7 @@ A configurable overlay window.
 
 - `CmdOrCtrl + Shift + R`: **Restart app**
 - `CmdOrCtrl + Shift + X`: **Exit app**
-- `CmdOrCtrl + Shift + H`: **Show ot hide app**
+- `CmdOrCtrl + Shift + H`: **Show or hide app**
 - `CmdOrCtrl + Shift + M`: **Toggle mouse focus**
 - `CmdOrCtrl + Shift + C`: **Open config folder**
 
